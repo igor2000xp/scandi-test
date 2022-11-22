@@ -11,7 +11,7 @@ export class CheckoutProgressBarComponent extends PureComponent {
 
     render() {
         return (
-            <div block="CheckoutProgressBar">
+            <div block="CheckoutProgressBar" className={}>
                 { /* TODO: Implement render method */ }
             </div>
         );
