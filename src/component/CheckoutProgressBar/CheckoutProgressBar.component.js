@@ -10,9 +10,21 @@ export class CheckoutProgressBarComponent extends PureComponent {
     };
 
     render() {
+        const count = this.props.quantitySteps;
         return (
-            <div block="CheckoutProgressBar" className={}>
+            <div block="CheckoutProgressBar">
                 { /* TODO: Implement render method */ }
+                {this.props.stepNames.map((item, index) => {
+                    return index < this.props.quantitySteps - 1 ?
+                      <div block="CheckoutProgressBar-itemLeft">
+                          <div block="leftLine" />
+                          <div block="itemBlock">
+                              <div block="itemNumber">{index + 1}</div>
+                              <div key={item}>{item.split(' ')[0]}</div>
+                          </div>
+                      </div>
+                      : <div block="leftLine" />;
+                })}
             </div>
         );
     }
