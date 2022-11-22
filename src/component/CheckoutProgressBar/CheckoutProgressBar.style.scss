@@ -10,33 +10,39 @@
   &-itemLeft {
     display: flex;
     justify-content: flex-end;
+    flex-basis: 100%;
 
+    .leftLine {
+      margin-top: 0.85rem;
+      height: 3px;
+      flex-basis: 100%;
+      background-color: #f26323;
+    }
+
+    .itemBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .itemNumber {
+        margin-bottom: 1rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: #f26323;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 2.1rem;
+      }
+    }
   }
-  .leftLine {
+  &-emptyLine {
     margin-top: 0.85rem;
     height: 3px;
-    //flex: 1 1 100%;
-    //width: 100%;
-    width: 200px;
+    flex-basis: 100%;
     background-color: #f26323;
   }
 
-  .itemBlock {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    .itemNumber {
-      margin-bottom: 1rem;
-      width: 2rem;
-      height: 2rem;
-      background-color: #f26323;
-      border-radius: 50%;
-      color: white;
-      text-align: center;
-      font-size: 1.1rem;
-      line-height: 2.1rem;
-    }
-  }
 }

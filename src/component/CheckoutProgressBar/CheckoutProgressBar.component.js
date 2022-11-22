@@ -23,7 +23,7 @@ export class CheckoutProgressBarComponent extends PureComponent {
                               <div key={item}>{item.split(' ')[0]}</div>
                           </div>
                       </div>
-                      : <div block="leftLine" />;
+                      : <div block="CheckoutProgressBar-emptyLine" />;
                 })}
             </div>
         );
