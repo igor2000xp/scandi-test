@@ -3,7 +3,7 @@ import {
 } from 'SourceRoute/Checkout/Checkout.component';
 import './Checkout.style';
 import ContentWrapper from "@scandipwa/scandipwa/src/component/ContentWrapper";
-import {SHIPPING_STEP} from "@scandipwa/scandipwa/src/route/Checkout/Checkout.config";
+// import {SHIPPING_STEP} from "@scandipwa/scandipwa/src/route/Checkout/Checkout.config";
 import CheckoutProgressBarComponent from "Component/CheckoutProgressBar/CheckoutProgressBar.component";
 
 /** @namespace ScandiTest/Route/Checkout/Component */
@@ -11,24 +11,20 @@ export class CheckoutComponent extends SourceCheckout {
 
     renderBar() {
       const { checkoutStep } = this.props;
-      const { title = '' } = this.stepMap[checkoutStep];
+      const activeStepValue = checkoutStep;
       const steps = Object.keys(this.stepMap);
       const quantitySteps = steps.length;
-      const stepNames = steps.map((item)=> {
+      const stepNames = steps.map((item) => {
         return this.stepMap[item].title;
-      })
-
-
-      console.log(stepNames);
+      });
+      const activeStepIndex = steps.indexOf(activeStepValue);
 
       return (
         <CheckoutProgressBarComponent
           stepNames={stepNames}
           quantitySteps={quantitySteps}
+          activeStepIndex={activeStepIndex}
         />
-        // <h2 block="CheckoutProgressBar" elem="Title">
-        //   COUNT {this.stepMap[SHIPPING_STEP].title}
-        // </h2>
       );
     }
     // TODO implement logic
