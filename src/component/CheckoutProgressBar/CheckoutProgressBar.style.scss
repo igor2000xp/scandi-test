@@ -1,0 +1,64 @@
+.CheckoutProgressBar {
+    // TODO style the element
+  height: 5.8rem;
+  width: 100%;
+  background: var(--breadcrumbs-background);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &-itemLeft {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 100%;
+
+    .leftLine {
+      margin-top: 0.85rem;
+      height: 3px;
+      flex-basis: 100%;
+      background-color: #a8a7a7;
+    }
+
+    .itemBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .itemNumber {
+        margin-bottom: 1rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: #a8a7a7;
+        border-radius: 50%;
+        color: black;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 2.1rem;
+      }
+      .active {
+        background-color: #f26323;
+        color: white;
+      }
+      .item-text {
+        opacity: 0.5;
+        text-align: center;
+        width: 5rem;
+      }
+      .active-text {
+        opacity: 1;
+      }
+    }
+  }
+  &-emptyLine {
+    margin-top: 0.85rem;
+    height: 3px;
+    flex-basis: 100%;
+    background-color: #a8a7a7;
+  }
+  .active {
+    background-color: #f26323;
+    color: white;
+  }
+
+}
